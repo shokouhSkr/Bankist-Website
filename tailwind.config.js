@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./public/**/*.{html,js}", "./src/js/*.{html,js}"],
+  content: ["./public/**/*.{html,js}", "./src/**/*.{html,js}"],
   darkMode: "class",
   theme: {
     container: {
@@ -7,6 +7,7 @@ module.exports = {
       // padding: "1rem",
     },
     extend: {
+      colors: {},
       fontFamily: {
         // sans: ["Vazir"],
         Poppins: ["Poppins", "sans - serif"],
@@ -26,5 +27,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
