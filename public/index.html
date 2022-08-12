@@ -19,7 +19,7 @@
   </head>
   <body class="h-screen bg-[#f3f3f3] font-['Poppins'] text-[#444]">
     <!-- HEADER -->
-    <header class="flex items-center justify-between bg-red-200 p-4">
+    <header class="flex items-center justify-between p-4">
       <img class="w-24" src="/src/img/logo.png" alt="Logo" />
 
       <!-- NAVBAR - DESKTOP -->
@@ -33,65 +33,75 @@
       </nav>
 
       <!-- NAVBAR - MOBILE -->
-      <!-- DAISY UI - DROPDOWN COMPONENT -->
-      <div class="dropdown-left dropdown sm:hidden">
-        <label class="swap-rotate swap text-[#444]">
-          <input type="checkbox" />
-
-          <!-- OPEN ICON -->
+      <div class="relative sm:hidden">
+        <button class="relative z-10 block rounded-md bg-white p-1.5 focus:outline-none">
           <svg
-            class="swap-off ml-4 h-6 w-6 fill-current"
+            class="h-5 w-5 text-[#222]"
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
+            viewBox="0 0 20 20"
+            fill="currentColor"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            <path
+              fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            />
           </svg>
+        </button>
 
-          <!-- CLOSE ICON -->
-          <svg
-            class="swap-on ml-4 h-6 w-6 fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
+        <div
+          class="absolute right-0 z-20 mt-2 hidden w-48 rounded-md bg-white py-2 opacity-95 shadow-xl"
+        >
+          <a
+            href="#"
+            class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </label>
-        <!-- <ul tabindex="0" class="dropdown-content menu w-32 rounded-sm bg-white p-1 shadow">
-          <li><a>Item 1</a></li>
-          <li><a>Item 2</a></li>
-        </ul> -->
+            your profile
+          </a>
+          <a
+            href="#"
+            class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+          >
+            Your projects
+          </a>
+          <a
+            href="#"
+            class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+          >
+            Help
+          </a>
+        </div>
       </div>
     </header>
 
     <main>
       <!-- HOME -->
       <section
-        class="flex flex-col gap-y-4 border-b border-[#ddd] bg-blue-300 p-4 py-8 sm:flex-row sm:justify-between"
+        class="flex flex-col gap-y-5 border-b border-[#ddd] p-4 pt-12 pb-7 sm:mx-12 sm:flex-row sm:justify-between"
       >
-        <div class="flex flex-col gap-y-2">
-          <h1 class="text-2xl text-[#444]">
-            When <span>banking</span> meets <span>minimalist</span>
+        <div class="relative">
+          <h1 class="mb-6 text-4xl font-semibold text-[#444]">
+            When
+            <span class="highlight">banking</span>
+            meets<br />
+            <span class="bg-gradient-to-tl from-[#39b385] to-[#9be15d]">minimalist</span>
           </h1>
-          <p>A simpler banking experience for a simpler life.</p>
-          <button class="text-2xs text-left">Learn more &DownArrow;</button>
+          <p class="mb-4 font-medium">A simpler banking experience for a simpler life.</p>
+          <button class="border-b border-[#5ec576] pb-0.5 text-left text-xs text-[#5ec576]">
+            Learn more &DownArrow;
+          </button>
         </div>
         <div class="flex justify-end">
-          <img class="w-52" src="/src/img/hero.png" alt="hero image" />
+          <img class="w-60 -translate-y-5 translate-x-3" src="/src/img/hero.png" alt="hero image" />
         </div>
       </section>
 
       <!-- FEATURES -->
-      <section class="flex flex-col gap-y-3 border-b border-[#ddd] bg-pink-300 p-4">
+      <section class="flex flex-col gap-y-3 border-b border-[#ddd] p-4 pt-12 pb-7">
         <!-- FEATURES - HEADER -->
-        <div>
-          <span>FEATURES</span>
-          <h2>Everything you need in a modern bank and more.</h2>
+        <div class="section-header">
+          <span class="mb-4 text-xs font-medium text-[#5ec576]">FEATURES</span>
+          <h2 class="text-xl font-medium">Everything you need in a modern bank and more.</h2>
         </div>
 
         <!-- FEATURES - CONTENTS -->
@@ -99,38 +109,80 @@
           <div class="flex items-center justify-center">
             <img class="w-full" src="/src/img/digital.jpg" alt="" />
           </div>
-          <div class="flex flex-col gap-y-1">
-            <div>icon</div>
-            <h5>100% digital bank</h5>
-            <p>
+          <div>
+            <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#5ec5763a]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 stroke-[#5ec576]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <h5 class="mb-3 text-sm font-medium text-[#444]">100% digital bank</h5>
+            <p class="text-xs leading-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias sint quos?
               Accusantium a fugiat porro reiciendis saepe quibusdam debitis ducimus.
             </p>
           </div>
         </div>
 
-        <div class="flex flex-col gap-y-4 sm:flex-row-reverse sm:gap-x-4">
+        <div class="flex flex-col gap-y-4 pb-8 sm:flex-row-reverse sm:gap-x-4">
           <div class="flex items-center justify-center">
             <img class="w-full" src="/src/img/grow.jpg" alt="" />
           </div>
-          <div class="flex flex-col gap-y-1">
-            <div>icon</div>
-            <h5>Watch your money grow</h5>
-            <p>
+          <div>
+            <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#5ec5763a]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 stroke-[#5ec576]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                />
+              </svg>
+            </div>
+            <h5 class="mb-3 text-sm font-medium text-[#444]">Watch your money grow</h5>
+            <p class="text-xs leading-5">
               Nesciunt quos autem dolorum voluptates cum dolores dicta fuga inventore ab? Nulla
               incidunt eius numquam sequi iste pariatur quibusdam!
             </p>
           </div>
         </div>
 
-        <div class="flex flex-col gap-y-4 py-8 sm:flex-row sm:gap-x-4">
+        <div class="flex flex-col gap-y-4 pb-3.5 sm:flex-row sm:gap-x-4">
           <div class="flex items-center justify-center">
             <img class="w-full" src="/src/img/card.jpg" alt="" />
           </div>
-          <div class="flex flex-col gap-y-1">
-            <div>icon</div>
-            <h5>Free debit card included</h5>
-            <p>
+          <div>
+            <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#5ec5763a]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 stroke-[#5ec576]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                />
+              </svg>
+            </div>
+            <h5 class="mb-3 text-sm font-medium text-[#444]">Free debit card included</h5>
+            <p class="text-xs leading-5">
               Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim eveniet consequatur
               odit quam quos possimus assumenda dicta fuga inventore ab.
             </p>
@@ -140,12 +192,12 @@
 
       <!-- OPERATIONS -->
       <section
-        class="relative flex flex-col items-center justify-center gap-y-8 border-b border-[#ddd] bg-purple-300 p-4"
+        class="relative flex flex-col items-center justify-center gap-y-8 border-b border-[#ddd] p-4 py-10"
       >
         <!-- OPERATIONS - HEADER -->
-        <div>
-          <span>OPERATIONS</span>
-          <h2>Everything as simple as possible, but no simpler.</h2>
+        <div class="section-header">
+          <span class="mb-4 text-xs font-medium text-[#5ec576]">OPERATIONS</span>
+          <h2 class="text-xl font-medium">Everything as simple as possible, but no simpler.</h2>
         </div>
 
         <!-- OPERATIONS - BUTTONS -->
@@ -178,11 +230,13 @@
       </section>
 
       <!-- TESTIMONIALS -->
-      <section class="flex flex-col gap-y-3 border-b border-[#ddd] bg-pink-200 p-4">
+      <section class="flex flex-col gap-y-3 border-b border-[#ddd] p-4 py-10">
         <!-- TESTIMONIALS - HEADER -->
-        <div>
-          <span>NOT SURE YET?</span>
-          <h2>Millions of Bankists are already making their lifes simpler.</h2>
+        <div class="section-header">
+          <span class="mb-4 text-xs font-medium text-[#5ec576]">NOT SURE YET?</span>
+          <h2 class="text-xl font-medium">
+            Millions of Bankists are already making their lifes simpler.
+          </h2>
         </div>
 
         <!-- TESTIMONIALS - CONTENT -->
@@ -239,7 +293,7 @@
 
     <footer class="flex flex-col items-center justify-center">
       <nav>
-        <ul class="text-2xs flex gap-x-2">
+        <ul class="flex gap-x-2 text-2xs">
           <li>About</li>
           <li>Pricing</li>
           <li>Terms of Use</li>
