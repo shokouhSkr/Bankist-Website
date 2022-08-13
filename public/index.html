@@ -126,7 +126,7 @@
               </svg>
             </div>
             <h5 class="mb-3 text-sm font-medium text-[#444]">100% digital bank</h5>
-            <p class="text-xs leading-5">
+            <p class="text-xs leading-5 text-[#666]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias sint quos?
               Accusantium a fugiat porro reiciendis saepe quibusdam debitis ducimus.
             </p>
@@ -154,7 +154,7 @@
               </svg>
             </div>
             <h5 class="mb-3 text-sm font-medium text-[#444]">Watch your money grow</h5>
-            <p class="text-xs leading-5">
+            <p class="text-xs leading-5 text-[#666]">
               Nesciunt quos autem dolorum voluptates cum dolores dicta fuga inventore ab? Nulla
               incidunt eius numquam sequi iste pariatur quibusdam!
             </p>
@@ -182,7 +182,7 @@
               </svg>
             </div>
             <h5 class="mb-3 text-sm font-medium text-[#444]">Free debit card included</h5>
-            <p class="text-xs leading-5">
+            <p class="text-xs leading-5 text-[#666]">
               Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim eveniet consequatur
               odit quam quos possimus assumenda dicta fuga inventore ab.
             </p>
@@ -201,26 +201,42 @@
         </div>
 
         <!-- OPERATIONS - BUTTONS -->
-        <!-- <div class="absolute bottom-7 flex gap-x-5 text-2xs">
-          <button class="rounded-2xl bg-green-200 p-1">
-            01<span class="hidden sm:block">Instant Transfers</span>
+        <!-- <div class="absolute top-36 flex gap-x-4 text-2xs sm:top-28">
+          <button class="rounded-2xl bg-green-200 py-1 px-8">
+            <span>01</span>Instant Transfers
           </button>
-          <button class="rounded-2xl bg-green-200 p-1">
-            02<span class="hidden sm:block">Instant Loans</span>
-          </button>
-          <button class="rounded-2xl bg-green-200 p-1">
-            03<span class="hidden sm:block">Instant Closing</span>
-          </button>
+          <button class="rounded-2xl bg-green-200 py-1 px-8">02<span>Instant Loans</span></button>
+          <button class="rounded-2xl bg-green-200 py-1 px-8">03<span>Instant Closing</span></button>
         </div> -->
 
         <!-- OPERATIONS - CONTENT -->
-        <div class="flex w-72 flex-col gap-y-4 bg-white sm:w-96">
-          <div class="flex items-center justify-between">
-            <div class="rounded-full bg-red-500 p-2">icon</div>
-            <h5 class="text-xs">Tranfser money to anyone, instantly! No fees, no BS.</h5>
+        <div
+          class="grid grid-cols-[50px_minmax(80px,_1fr)] grid-rows-[50px_minmax(90px,_1fr)] gap-y-1.5 gap-x-4 bg-white p-4"
+        >
+          <div class="flex items-center justify-center">
+            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#ffcd0331]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 stroke-[#ffcb03]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                />
+              </svg>
+            </div>
           </div>
-          <div>
-            <p>
+          <div class="flex items-center">
+            <h5 class="row-start-1 row-end-2 text-sm font-medium leading-6">
+              Tranfser money to anyone, instantly! No fees, no BS.
+            </h5>
+          </div>
+          <div class="col-start-2">
+            <p class="row-start-2 row-end-3 text-xs leading-5 text-[#666] line-clamp-4">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -230,7 +246,7 @@
       </section>
 
       <!-- TESTIMONIALS -->
-      <section class="flex flex-col gap-y-3 border-b border-[#ddd] p-4 py-10">
+      <section class="flex flex-col gap-y-8 border-b border-[#ddd] p-4 py-10">
         <!-- TESTIMONIALS - HEADER -->
         <div class="section-header">
           <span class="mb-4 text-xs font-medium text-[#5ec576]">NOT SURE YET?</span>
@@ -240,38 +256,52 @@
         </div>
 
         <!-- TESTIMONIALS - CONTENT -->
-        <div class="relative">
-          <h6>Finally free from old-school banks</h6>
-          <p class="mb-3">
-            Debitis, nihil sit minus suscipit magni aperiam vel tenetur incidunt commodi architecto
-            numquam omnis nulla autem, necessitatibus blanditiis modi similique quidem. Odio aliquam
-            culpa dicta beatae quod maiores ipsa minus consequatur error sunt, deleniti saepe
-            aliquid quos inventore sequi. Necessitatibus id alias reiciendis, perferendis facere.
-          </p>
-
-          <!-- BUTTONS -->
-          <button
-            class="absolute flex h-6 w-6 items-center justify-center rounded-full bg-white p-1"
-          >
-            &larr;
-          </button>
-          <button
-            class="absolute flex h-6 w-6 items-center justify-center rounded-full bg-white p-1"
-          >
-            &rarr;
-          </button>
-        </div>
-        <div>
-          <div>img</div>
-          <div>
-            <h6>Francisco Gomes</h6>
-            <p>Lisbon, Portugal</p>
+        <div class="grid grid-cols-[30px_minmax(50px,_1fr)_30px] gap-x-3">
+          <!-- LEFT BUTTON -->
+          <div class="col-span-1 flex items-center justify-center">
+            <button
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-white p-1 pb-1.5"
+            >
+              &larr;
+            </button>
           </div>
-        </div>
-        <div class="flex justify-center gap-x-2">
-          <span class="h-2 w-2 cursor-pointer rounded-full bg-black"></span>
-          <span class="h-2 w-2 cursor-pointer rounded-full bg-black"></span>
-          <span class="h-2 w-2 cursor-pointer rounded-full bg-black"></span>
+
+          <!-- MAIN CONTENT -->
+          <div class="col-start-2 col-end-3">
+            <h6 class="mb-3 text-sm font-medium">Finally free from old-school banks</h6>
+            <p class="row-start-2 row-end-3 mb-4 text-xs leading-5 text-[#666] line-clamp-[8]">
+              Debitis, nihil sit minus suscipit magni aperiam vel tenetur incidunt commodi
+              architecto numquam omnis nulla autem, necessitatibus blanditiis modi similique quidem.
+              Odio aliquam culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
+              deleniti saepe aliquid quos inventore sequi. Necessitatibus id alias reiciendis,
+              perferendis facere.
+            </p>
+
+            <!-- AVATAR -->
+            <div class="ml-4 mb-6 flex items-center space-x-4">
+              <img class="h-10 w-10 rounded-full" src="/src/img/user-3.jpg" alt="" />
+              <div class="text-2xs font-medium">
+                <div class="text-[444] mb-1 font-medium">Francisco Gomes</div>
+                <div class="text-[#666]">Lisbon, Portugal</div>
+              </div>
+            </div>
+
+            <!-- DOTS -->
+            <div class="flex items-center justify-center gap-x-3">
+              <span class="h-[6.5px] w-[6px] cursor-pointer rounded-full bg-[#b9b9b9]"></span>
+              <span class="h-[6.5px] w-[6px] cursor-pointer rounded-full bg-[#b9b9b9]"></span>
+              <span class="h-[6.5px] w-[6px] cursor-pointer rounded-full bg-[#b9b9b9]"></span>
+            </div>
+          </div>
+
+          <!-- RIGHT BUTTON -->
+          <div class="col-start-3 col-end-4 flex items-center justify-center">
+            <button
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-white p-1 pb-1.5"
+            >
+              &rarr;
+            </button>
+          </div>
         </div>
       </section>
 
