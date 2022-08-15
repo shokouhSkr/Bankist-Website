@@ -17,14 +17,15 @@
     <link rel="shortcut icon" type="image/png" href="/src/img/icon.png" />
     <title>Bankist | When Banking Meets Minimalist</title>
   </head>
+
   <body class="h-screen bg-[#f3f3f3] font-['Poppins'] text-[#444]">
     <!-- HEADER -->
-    <header class="flex items-center justify-between p-4">
-      <img class="w-24" src="/src/img/logo.png" alt="Logo" />
+    <header class="flex items-center justify-between p-4 md:px-10 md:py-8 lg:p-10 2xs:px-6 xs:p-8">
+      <img class="w-24 xs:w-28" src="/src/img/logo.png" alt="Logo" />
 
       <!-- NAVBAR - DESKTOP -->
       <nav class="hidden text-xs sm:block">
-        <ul class="flex items-center justify-between gap-x-4">
+        <ul class="flex items-center justify-between gap-x-4 md:gap-x-6">
           <li>Features</li>
           <li>Operations</li>
           <li>Testimonials</li>
@@ -34,7 +35,7 @@
 
       <!-- NAVBAR - MOBILE -->
       <div class="relative sm:hidden">
-        <button class="relative z-10 block rounded-md bg-white p-1.5 focus:outline-none">
+        <button class="relative z-10 block rounded-md bg-white p-1.5 focus:outline-none xs:p-2">
           <svg
             class="h-5 w-5 text-[#222]"
             xmlns="http://www.w3.org/2000/svg"
@@ -50,25 +51,31 @@
         </button>
 
         <div
-          class="absolute right-0 z-20 mt-2 hidden w-48 rounded-md bg-white py-2 opacity-95 shadow-xl"
+          class="absolute right-0 z-20 mt-2 hidden w-44 rounded-md bg-white py-2 opacity-95 shadow-xl"
         >
           <a
             href="#"
             class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
           >
-            your profile
+            open account
           </a>
           <a
             href="#"
             class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
           >
-            Your projects
+            feathers
           </a>
           <a
             href="#"
             class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
           >
-            Help
+            operations
+          </a>
+          <a
+            href="#"
+            class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+          >
+            testimonials
           </a>
         </div>
       </div>
@@ -76,254 +83,320 @@
 
     <main>
       <!-- HOME -->
-      <section
-        class="flex flex-col gap-y-5 border-b border-[#ddd] p-4 pt-12 pb-7 sm:mx-12 sm:flex-row sm:justify-between"
-      >
-        <div class="relative">
-          <h1 class="mb-6 text-4xl font-semibold text-[#444]">
-            When
-            <span class="highlight">banking</span>
-            meets<br />
-            <span class="bg-gradient-to-tl from-[#39b385] to-[#9be15d]">minimalist</span>
-          </h1>
-          <p class="mb-4 font-medium">A simpler banking experience for a simpler life.</p>
-          <button class="border-b border-[#5ec576] pb-0.5 text-left text-xs text-[#5ec576]">
-            Learn more &DownArrow;
-          </button>
-        </div>
-        <div class="flex justify-end">
-          <img class="w-60 -translate-y-5 translate-x-3" src="/src/img/hero.png" alt="hero image" />
-        </div>
-      </section>
+      <div class="border-b border-[#ddd]">
+        <section
+          class="flex flex-col gap-y-5 p-4 pt-12 pb-7 sm:flex-row sm:justify-between md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
+        >
+          <div class="relative sm:basis-1/2">
+            <h1 class="mb-6 text-4xl font-semibold text-[#444] lg:mb-7 lg:text-5xl">
+              When
+              <span class="highlight">banking</span>
+              meets<br />
+              <span class="bg-gradient-to-tl from-[#39b385] to-[#9be15d]">minimalist</span>
+            </h1>
+            <p class="mb-4 font-medium sm:w-60 lg:mb-5 lg:text-lg">
+              A simpler banking experience for a simpler life.
+            </p>
+            <button
+              class="border-b border-[#5ec576] pb-0.5 text-left text-xs text-[#5ec576] lg:text-sm"
+            >
+              Learn more &DownArrow;
+            </button>
+          </div>
+          <div class="flex justify-end sm:basis-1/2">
+            <img
+              class="w-60 -translate-y-5 translate-x-3 lg:w-96 xl:w-64 xs:w-80"
+              src="/src/img/hero.png"
+              alt="hero image"
+            />
+          </div>
+        </section>
+      </div>
 
       <!-- FEATURES -->
-      <section class="flex flex-col gap-y-3 border-b border-[#ddd] p-4 pt-12 pb-7">
-        <!-- FEATURES - HEADER -->
-        <div class="section-header">
-          <span class="mb-4 text-xs font-medium text-[#5ec576]">FEATURES</span>
-          <h2 class="text-xl font-medium">Everything you need in a modern bank and more.</h2>
-        </div>
+      <div class="border-b border-[#ddd]">
+        <section
+          class="flex flex-col gap-y-3 border-b border-[#ddd] p-4 pt-12 pb-7 md:mx-8 lg:mx-28 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-10"
+        >
+          <!-- FEATURES - HEADER -->
+          <div class="section-header">
+            <span class="mb-4 text-xs font-medium text-[#5ec576] lg:text-sm">FEATURES</span>
+            <h2 class="text-xl font-medium lg:text-2xl">
+              Everything you need in a modern bank and more.
+            </h2>
+          </div>
 
-        <!-- FEATURES - CONTENTS -->
-        <div class="flex flex-col gap-y-4 py-8 sm:flex-row sm:gap-x-4">
-          <div class="flex items-center justify-center">
-            <img class="w-full" src="/src/img/digital.jpg" alt="" />
-          </div>
-          <div>
-            <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#5ec5763a]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 stroke-[#5ec576]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
+          <!-- FEATURES - CONTENTS -->
+          <!-- TOP -->
+          <div
+            class="flex flex-col gap-y-4 py-8 sm:flex-row sm:gap-x-8 sm:pb-10 lg:gap-x-20 xs:pb-12"
+          >
+            <div class="flex basis-1/2 items-center justify-center">
+              <img src="/src/img/digital.jpg" alt="" />
             </div>
-            <h5 class="mb-3 text-sm font-medium text-[#444]">100% digital bank</h5>
-            <p class="text-xs leading-5 text-[#666]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias sint quos?
-              Accusantium a fugiat porro reiciendis saepe quibusdam debitis ducimus.
-            </p>
+            <div class="basis-1/2">
+              <div
+                class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#5ec5763a] lg:h-11 lg:w-11"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 stroke-[#5ec576] lg:h-6 lg:w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h5 class="mb-3 text-sm font-medium text-[#444] lg:text-base">100% digital bank</h5>
+              <p class="text-xs leading-5 text-[#666] line-clamp-[4] lg:text-sm lg:leading-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias sint quos?
+                Accusantium a fugiat porro reiciendis saepe quibusdam debitis ducimus.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex flex-col gap-y-4 pb-8 sm:flex-row-reverse sm:gap-x-4">
-          <div class="flex items-center justify-center">
-            <img class="w-full" src="/src/img/grow.jpg" alt="" />
-          </div>
-          <div>
-            <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#5ec5763a]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 stroke-[#5ec576]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                />
-              </svg>
+          <!-- MIDDLE -->
+          <div
+            class="flex flex-col gap-y-4 pb-8 sm:flex-row-reverse sm:gap-x-8 sm:pb-10 lg:gap-x-20 xs:pb-12"
+          >
+            <div class="flex basis-1/2 items-center justify-center">
+              <img src="/src/img/grow.jpg" alt="" />
             </div>
-            <h5 class="mb-3 text-sm font-medium text-[#444]">Watch your money grow</h5>
-            <p class="text-xs leading-5 text-[#666]">
-              Nesciunt quos autem dolorum voluptates cum dolores dicta fuga inventore ab? Nulla
-              incidunt eius numquam sequi iste pariatur quibusdam!
-            </p>
+            <div class="basis-1/2">
+              <div
+                class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#5ec5763a] lg:h-11 lg:w-11"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 stroke-[#5ec576] lg:h-6 lg:w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                  />
+                </svg>
+              </div>
+              <h5 class="mb-3 text-sm font-medium text-[#444] lg:text-base">
+                Watch your money grow
+              </h5>
+              <p class="text-xs leading-5 text-[#666] line-clamp-[4] lg:text-sm lg:leading-6">
+                Nesciunt quos autem dolorum voluptates cum dolores dicta fuga inventore ab? Nulla
+                incidunt eius numquam sequi iste pariatur quibusdam!
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex flex-col gap-y-4 pb-3.5 sm:flex-row sm:gap-x-4">
-          <div class="flex items-center justify-center">
-            <img class="w-full" src="/src/img/card.jpg" alt="" />
-          </div>
-          <div>
-            <div class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#5ec5763a]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 stroke-[#5ec576]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-                />
-              </svg>
+          <!-- BOTTOM -->
+          <div class="flex flex-col gap-y-4 pb-3.5 sm:flex-row sm:gap-x-8 sm:pb-10 lg:gap-x-20">
+            <div class="flex basis-1/2 items-center justify-center">
+              <img src="/src/img/card.jpg" alt="" />
             </div>
-            <h5 class="mb-3 text-sm font-medium text-[#444]">Free debit card included</h5>
-            <p class="text-xs leading-5 text-[#666]">
-              Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim eveniet consequatur
-              odit quam quos possimus assumenda dicta fuga inventore ab.
-            </p>
+            <div class="basis-1/2">
+              <div
+                class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#5ec5763a] lg:h-11 lg:w-11"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 stroke-[#5ec576] lg:h-6 lg:w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                  />
+                </svg>
+              </div>
+              <h5 class="mb-3 text-sm font-medium text-[#444] lg:text-base">
+                Free debit card included
+              </h5>
+              <p class="text-xs leading-5 text-[#666] line-clamp-[4] lg:text-sm lg:leading-6">
+                Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim eveniet
+                consequatur odit quam quos possimus assumenda dicta fuga inventore ab.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <!-- OPERATIONS -->
-      <section
-        class="relative flex flex-col items-center justify-center gap-y-8 border-b border-[#ddd] p-4 py-10"
-      >
-        <!-- OPERATIONS - HEADER -->
-        <div class="section-header">
-          <span class="mb-4 text-xs font-medium text-[#5ec576]">OPERATIONS</span>
-          <h2 class="text-xl font-medium">Everything as simple as possible, but no simpler.</h2>
-        </div>
-
-        <!-- OPERATIONS - BUTTONS -->
-        <!-- <div class="absolute top-36 flex gap-x-4 text-2xs sm:top-28">
-          <button class="rounded-2xl bg-green-200 py-1 px-8">
-            <span>01</span>Instant Transfers
-          </button>
-          <button class="rounded-2xl bg-green-200 py-1 px-8">02<span>Instant Loans</span></button>
-          <button class="rounded-2xl bg-green-200 py-1 px-8">03<span>Instant Closing</span></button>
-        </div> -->
-
-        <!-- OPERATIONS - CONTENT -->
-        <div
-          class="grid grid-cols-[50px_minmax(80px,_1fr)] grid-rows-[50px_minmax(90px,_1fr)] gap-y-1.5 gap-x-4 bg-white p-4"
+      <div class="border-b border-[#ddd]">
+        <section
+          class="relative flex flex-col items-center justify-center border-b border-[#ddd] p-4 py-10 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
         >
-          <div class="flex items-center justify-center">
-            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#ffcd0331]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 stroke-[#ffcb03]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
-                />
-              </svg>
-            </div>
+          <!-- OPERATIONS - HEADER -->
+          <div class="section-header mb-8">
+            <span class="mb-4 text-xs font-medium text-[#5ec576] lg:text-sm">OPERATIONS</span>
+            <h2 class="552:mb-2 text-xl font-medium lg:text-2xl">
+              Everything as simple as possible, but no simpler.
+            </h2>
           </div>
-          <div class="flex items-center">
-            <h5 class="row-start-1 row-end-2 text-sm font-medium leading-6">
-              Tranfser money to anyone, instantly! No fees, no BS.
-            </h5>
-          </div>
-          <div class="col-start-2">
-            <p class="row-start-2 row-end-3 text-xs leading-5 text-[#666] line-clamp-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      <!-- TESTIMONIALS -->
-      <section class="flex flex-col gap-y-8 border-b border-[#ddd] p-4 py-10">
-        <!-- TESTIMONIALS - HEADER -->
-        <div class="section-header">
-          <span class="mb-4 text-xs font-medium text-[#5ec576]">NOT SURE YET?</span>
-          <h2 class="text-xl font-medium">
-            Millions of Bankists are already making their lifes simpler.
-          </h2>
-        </div>
-
-        <!-- TESTIMONIALS - CONTENT -->
-        <div class="grid grid-cols-[30px_minmax(50px,_1fr)_30px] gap-x-3">
-          <!-- LEFT BUTTON -->
-          <div class="col-span-1 flex items-center justify-center">
+          <!-- OPERATIONS - BUTTONS -->
+          <div
+            class="absolute top-[150px] z-20 text-2xs font-semibold transition-all duration-500 sm:top-[125px] 552px:top-[120px]"
+          >
             <button
-              class="flex h-8 w-8 items-center justify-center rounded-full bg-white p-1 pb-1.5"
+              class="mr-3 w-16 rounded-2xl bg-[#ffcb03] py-1.5 transition-all duration-500 focus:-translate-y-1 md:mr-7 552px:w-28"
             >
-              &larr;
+              <span class="552px:hidden">Transfers</span
+              ><span class="hidden 552px:block">Instant Transfers</span>
+            </button>
+            <button
+              class="mr-3 w-16 rounded-2xl bg-[#5ec576] py-1.5 transition-all duration-500 focus:-translate-y-1 md:mr-7 552px:w-28"
+            >
+              <span class="552px:hidden">Loans</span
+              ><span class="hidden 552px:block">Instant Loans</span>
+            </button>
+            <button
+              class="mr-3 w-16 rounded-2xl bg-[#ff585f] py-1.5 transition-all duration-500 focus:-translate-y-1 md:mr-7 552px:w-28"
+            >
+              <span class="552px:hidden">Closing</span
+              ><span class="hidden 552px:block">Instant Closing</span>
             </button>
           </div>
 
-          <!-- MAIN CONTENT -->
-          <div class="col-start-2 col-end-3">
-            <h6 class="mb-3 text-sm font-medium">Finally free from old-school banks</h6>
-            <p class="row-start-2 row-end-3 mb-4 text-xs leading-5 text-[#666] line-clamp-[8]">
-              Debitis, nihil sit minus suscipit magni aperiam vel tenetur incidunt commodi
-              architecto numquam omnis nulla autem, necessitatibus blanditiis modi similique quidem.
-              Odio aliquam culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
-              deleniti saepe aliquid quos inventore sequi. Necessitatibus id alias reiciendis,
-              perferendis facere.
-            </p>
+          <!-- OPERATIONS - CONTENT -->
+          <div
+            class="relative grid grid-cols-[50px_minmax(80px,_1fr)] grid-rows-[50px_minmax(90px,_1fr)] gap-y-1.5 gap-x-4 bg-white p-4 pt-8 md:px-12"
+          >
+            <div class="flex items-center justify-center">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#ffcd0331]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 stroke-[#ffcb03]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <h5 class="row-start-1 row-end-2 text-sm font-medium leading-6">
+                Tranfser money to anyone, instantly! No fees, no BS.
+              </h5>
+            </div>
+            <div class="col-start-2">
+              <p class="row-start-2 row-end-3 text-xs leading-5 text-[#666] line-clamp-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
 
-            <!-- AVATAR -->
-            <div class="ml-4 mb-6 flex items-center space-x-4">
-              <img class="h-10 w-10 rounded-full" src="/src/img/user-3.jpg" alt="" />
-              <div class="text-2xs font-medium">
-                <div class="text-[444] mb-1 font-medium">Francisco Gomes</div>
-                <div class="text-[#666]">Lisbon, Portugal</div>
+      <!-- TESTIMONIALS -->
+      <div class="border-b border-[#ddd]">
+        <section
+          class="flex flex-col gap-y-12 border-b border-[#ddd] p-4 py-10 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
+        >
+          <!-- TESTIMONIALS - HEADER -->
+          <div class="section-header">
+            <span class="mb-4 text-xs font-medium text-[#5ec576] lg:text-sm">NOT SURE YET?</span>
+            <h2 class="text-xl font-medium lg:text-2xl">
+              Millions of Bankists are already making their lifes simpler.
+            </h2>
+          </div>
+
+          <!-- TESTIMONIALS - CONTENT -->
+          <div class="grid grid-cols-[30px_minmax(50px,_1fr)_30px] gap-x-3">
+            <!-- LEFT BUTTON -->
+            <div class="col-span-1 flex items-center justify-center">
+              <button
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-white p-1 pb-1.5"
+              >
+                &larr;
+              </button>
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <div class="col-start-2 col-end-3 mx-4">
+              <h6 class="relative mb-3 text-sm font-medium">
+                <span class="absolute -left-9 -top-8 text-8xl font-normal text-[#5ec576]">
+                  &#8220;</span
+                >
+                Finally free from old-school banks
+              </h6>
+              <p class="row-start-2 row-end-3 mb-4 text-xs leading-5 text-[#666] line-clamp-[8]">
+                Debitis, nihil sit minus suscipit magni aperiam vel tenetur incidunt commodi
+                architecto numquam omnis nulla autem, necessitatibus blanditiis modi similique
+                quidem. Odio aliquam culpa dicta beatae quod maiores ipsa minus consequatur error
+                sunt, deleniti saepe aliquid quos inventore sequi. Necessitatibus id alias
+                reiciendis, perferendis facere.
+              </p>
+
+              <!-- AVATAR -->
+              <div class="ml-4 mb-10 flex items-center space-x-4">
+                <img class="h-10 w-10 rounded-full" src="/src/img/user-3.jpg" alt="" />
+                <div class="text-2xs font-medium">
+                  <div class="text-[444] mb-1 font-medium">Francisco Gomes</div>
+                  <div class="text-[#666]">Lisbon, Portugal</div>
+                </div>
+              </div>
+
+              <!-- DOTS -->
+              <div class="flex items-center justify-center gap-x-3">
+                <span class="h-[6.5px] w-[6px] cursor-pointer rounded-full bg-[#b9b9b9]"></span>
+                <span class="h-[6.5px] w-[6px] cursor-pointer rounded-full bg-[#b9b9b9]"></span>
+                <span class="h-[6.5px] w-[6px] cursor-pointer rounded-full bg-[#b9b9b9]"></span>
               </div>
             </div>
 
-            <!-- DOTS -->
-            <div class="flex items-center justify-center gap-x-3">
-              <span class="h-[6.5px] w-[6px] cursor-pointer rounded-full bg-[#b9b9b9]"></span>
-              <span class="h-[6.5px] w-[6px] cursor-pointer rounded-full bg-[#b9b9b9]"></span>
-              <span class="h-[6.5px] w-[6px] cursor-pointer rounded-full bg-[#b9b9b9]"></span>
+            <!-- RIGHT BUTTON -->
+            <div class="col-start-3 col-end-4 flex items-center justify-center">
+              <button
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-white p-1 pb-1.5"
+              >
+                &rarr;
+              </button>
             </div>
           </div>
-
-          <!-- RIGHT BUTTON -->
-          <div class="col-start-3 col-end-4 flex items-center justify-center">
-            <button
-              class="flex h-8 w-8 items-center justify-center rounded-full bg-white p-1 pb-1.5"
-            >
-              &rarr;
-            </button>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <!-- SING UP -->
-      <section class="flex flex-col gap-y-3 border-b border-[#ddd] bg-gray-600 p-4 text-white">
+      <section
+        class="flex flex-col items-center justify-center gap-y-10 border-b border-[#444] bg-[#37383D] p-4 py-8 text-white 2xs:px-6 xs:px-8 xs:pb-12"
+      >
         <!-- SIGN UP - HEADER -->
-        <div>
-          <h2>The best day to join Bankist was one year ago. The second best is today!</h2>
+        <div class="section-header">
+          <h2 class="text-xl font-medium text-white lg:text-2xl">
+            The best day to join Bankist was one year ago.<br class="sm:hidden" />
+            The second best is today!
+          </h2>
         </div>
 
         <!-- SIGN UP - BUTTON -->
         <div>
-          <button class="rounded-full bg-[#5ec576] px-4 py-2 text-xs text-[#222]">
+          <button class="rounded-full bg-[#5ec576] px-5 py-3 text-xs font-medium text-[#222]">
             Open your free acount today!
           </button>
         </div>
       </section>
     </main>
 
-    <footer class="flex flex-col items-center justify-center">
-      <nav>
-        <ul class="flex gap-x-2 text-2xs">
+    <footer class="bg-[#37383D] p-4 py-8 text-white">
+      <nav class="mb-6">
+        <ul class="flex justify-between text-[8px]">
           <li>About</li>
           <li>Pricing</li>
           <li>Terms of Use</li>
@@ -333,8 +406,47 @@
           <li>Contact Us</li>
         </ul>
       </nav>
-      <div>LOGO</div>
+      <div class="flex items-center justify-center">
+        <img class="w-10" src="/src/img/icon.png" alt="" />
+      </div>
     </footer>
+
+    <!-- MODAL WINDOW -->
+    <div
+      class="fixed hidden z-50 left-1/2 top-1/2 -translate-x-1/2 w-4/5 -translate-y-1/2 bg-[#f3f3f3] py-6 px-6 shadow-lg"
+    >
+      <!-- CLOSE BUTTON -->
+      <button class="absolute right-3 top-2 text-lg">&times;</button>
+
+      <h1 class="text-xs mb-4 w-40">Open your bank account in just <span>5 minutes>
+      </h1>
+
+      <form>
+        <div class="flex mb-2 gap-x-5">
+          <label class="text-2xs">First Name</label>
+          <input class="bg-red-200 w-1/2" type="text">
+        </div>
+        <div class="flex mb-2 gap-x-5">
+          <label class="text-2xs">First Name</label>
+          <input class="bg-red-200 w-1/2" type="text">
+        </div>
+        <div class="flex mb-4 gap-x-5">
+          <label class="text-2xs">First Name</label>
+          <input class="bg-red-200 w-1/2" type="text">
+        </div>
+
+       <div class="flex justify-center ml-8 items-center">
+         <button class="bg-[#5ec576] px-5 py-1 text-xs rounded-full text-black">Next step &rarr;</button>
+       </div>
+
+      </form>
+
+    </div>
+
+    <!-- OVERLAY -->
+      <div
+      class="overlay hidden fixed top-0 left-0 w-full h-full bg-[#0000005c] backdrop-blur-[3px] z-40"
+    ></div>
 
     <script src="/src/js/script.js"></script>
   </body>

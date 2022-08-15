@@ -23,9 +23,13 @@ module.exports = {
       screens: {
         "2xs": "375px",
         xs: "425px",
+        "552px": "552px",
         "3xl": "1440px",
+      },
+      corePlugins: {
+        aspectRatio: false,
       },
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [require("@tailwindcss/line-clamp"), require("@tailwindcss/aspect-ratio")],
 };

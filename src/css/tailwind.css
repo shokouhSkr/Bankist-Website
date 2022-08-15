@@ -11,6 +11,6 @@
   }
 
   .section-header {
-    @apply mx-auto flex flex-col items-start justify-center text-xs;
+    @apply flex flex-col items-start justify-center text-xs;
   }
 }
