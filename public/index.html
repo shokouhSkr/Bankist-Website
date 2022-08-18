@@ -18,23 +18,24 @@
     <title>Bankist | When Banking Meets Minimalist</title>
   </head>
 
-  <body class="h-screen bg-[#f3f3f3] font-['Poppins'] text-[#444]">
-    <!-- HEADER -->
+  <body class="relative h-screen bg-[#f3f3f3] font-['Poppins'] text-[#444]">
     <header class="flex items-center justify-between p-4 md:px-10 md:py-8 lg:p-10 2xs:px-6 xs:p-8">
       <img class="w-24 xs:w-28" src="/src/img/logo.png" alt="Logo" />
 
       <!-- NAVBAR - DESKTOP -->
       <nav class="hidden text-xs sm:block">
-        <ul class="flex items-center justify-between gap-x-4 md:gap-x-6">
-          <li>Features</li>
-          <li>Operations</li>
-          <li>Testimonials</li>
-          <li class="rounded-full bg-[#5ec576] px-4 py-2 text-[#222]">Open account</li>
+        <ul class="nav-links flex items-center justify-between gap-x-4 md:gap-x-6">
+          <li><a class="nav-link" href="#features-section">Features</a></li>
+          <li><a class="nav-link" href="#operations-section">Operations</a></li>
+          <li><a class="nav-link" href="#testimonials-section">Testimonials</a></li>
+          <li class="btn-open-modal cursor-pointer rounded-full bg-[#5ec576] px-4 py-2 text-[#222]">
+            Open account
+          </li>
         </ul>
       </nav>
 
       <!-- NAVBAR - MOBILE -->
-      <div class="relative sm:hidden">
+      <div class="dropdown relative sm:hidden">
         <button class="relative z-10 block rounded-md bg-white p-1.5 focus:outline-none xs:p-2">
           <svg
             class="h-5 w-5 text-[#222]"
@@ -51,39 +52,47 @@
         </button>
 
         <div
-          class="absolute right-0 z-20 mt-2 hidden w-44 rounded-md bg-white py-2 opacity-95 shadow-xl"
+          class="nav toggle-dropdown absolute right-0 z-20 mt-2 hidden w-44 rounded-md bg-white py-2 opacity-95 shadow-xl"
         >
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
-          >
-            open account
-          </a>
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
-          >
-            feathers
-          </a>
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
-          >
-            operations
-          </a>
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
-          >
-            testimonials
-          </a>
+          <ul class="nav-links">
+            <li>
+              <a
+                href="#"
+                class="btn-open-modal nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+              >
+                open account
+              </a>
+            </li>
+            <li>
+              <a
+                href="#features-section"
+                class="nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+              >
+                feathers
+              </a>
+            </li>
+            <li>
+              <a
+                href="#operations-section"
+                class="nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+              >
+                operations
+              </a>
+            </li>
+            <a
+              href="#testimonials-section"
+              class="nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+            >
+              testimonials
+            </a>
+          </ul>
         </div>
       </div>
     </header>
 
     <main>
       <!-- HOME -->
-      <div class="border-b border-[#ddd]">
+      <div id="home" class="border-b border-[#ddd]">
         <section
           class="flex flex-col gap-y-5 p-4 pt-12 pb-7 sm:flex-row sm:justify-between md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
         >
@@ -97,11 +106,12 @@
             <p class="mb-4 font-medium sm:w-60 lg:mb-5 lg:text-lg">
               A simpler banking experience for a simpler life.
             </p>
-            <button
-              class="border-b border-[#5ec576] pb-0.5 text-left text-xs text-[#5ec576] lg:text-sm"
+            <a
+              href="#features-section"
+              class="btn-scroll-to border-b border-[#5ec576] pb-0.5 text-left text-xs text-[#5ec576] lg:text-sm"
             >
-              Learn more &DownArrow;
-            </button>
+              Learn more &DownArrow;</a
+            >
           </div>
           <div class="flex justify-end sm:basis-1/2">
             <img
@@ -114,9 +124,9 @@
       </div>
 
       <!-- FEATURES -->
-      <div class="border-b border-[#ddd]">
+      <div id="features-section" class="border-b border-[#ddd]">
         <section
-          class="flex flex-col gap-y-3 border-b border-[#ddd] p-4 pt-12 pb-7 md:mx-8 lg:mx-28 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-10"
+          class="flex flex-col gap-y-3 p-4 pt-12 pb-7 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-10"
         >
           <!-- FEATURES - HEADER -->
           <div class="section-header">
@@ -132,7 +142,7 @@
             class="flex flex-col gap-y-4 py-8 sm:flex-row sm:gap-x-8 sm:pb-10 lg:gap-x-20 xs:pb-12"
           >
             <div class="flex basis-1/2 items-center justify-center">
-              <img src="/src/img/digital.jpg" alt="" />
+              <img src="/src/img/digital-lazy.jpg" alt="" />
             </div>
             <div class="basis-1/2">
               <div
@@ -165,7 +175,7 @@
             class="flex flex-col gap-y-4 pb-8 sm:flex-row-reverse sm:gap-x-8 sm:pb-10 lg:gap-x-20 xs:pb-12"
           >
             <div class="flex basis-1/2 items-center justify-center">
-              <img src="/src/img/grow.jpg" alt="" />
+              <img src="/src/img/grow-lazy.jpg" alt="" />
             </div>
             <div class="basis-1/2">
               <div
@@ -198,7 +208,7 @@
           <!-- BOTTOM -->
           <div class="flex flex-col gap-y-4 pb-3.5 sm:flex-row sm:gap-x-8 sm:pb-10 lg:gap-x-20">
             <div class="flex basis-1/2 items-center justify-center">
-              <img src="/src/img/card.jpg" alt="" />
+              <img src="/src/img/card-lazy.jpg" alt="" />
             </div>
             <div class="basis-1/2">
               <div
@@ -231,9 +241,9 @@
       </div>
 
       <!-- OPERATIONS -->
-      <div class="border-b border-[#ddd]">
+      <div id="operations-section" class="border-b border-[#ddd]">
         <section
-          class="relative flex flex-col items-center justify-center border-b border-[#ddd] p-4 py-10 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
+          class="relative flex flex-col items-center justify-center p-4 py-10 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
         >
           <!-- OPERATIONS - HEADER -->
           <div class="section-header mb-8">
@@ -245,7 +255,7 @@
 
           <!-- OPERATIONS - BUTTONS -->
           <div
-            class="absolute top-[150px] z-20 text-2xs font-semibold transition-all duration-500 sm:top-[125px] 552px:top-[120px]"
+            class="absolute top-[150px] z-20 text-2xs font-semibold transition-all duration-500 sm:top-[125px] 552px:top-[150px]"
           >
             <button
               class="mr-3 w-16 rounded-2xl bg-[#ffcb03] py-1.5 transition-all duration-500 focus:-translate-y-1 md:mr-7 552px:w-28"
@@ -305,9 +315,9 @@
       </div>
 
       <!-- TESTIMONIALS -->
-      <div class="border-b border-[#ddd]">
+      <div id="testimonials-section" class="border-b border-[#ddd]">
         <section
-          class="flex flex-col gap-y-12 border-b border-[#ddd] p-4 py-10 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
+          class="flex flex-col gap-y-12 p-4 py-10 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
         >
           <!-- TESTIMONIALS - HEADER -->
           <div class="section-header">
@@ -346,7 +356,7 @@
 
               <!-- AVATAR -->
               <div class="ml-4 mb-10 flex items-center space-x-4">
-                <img class="h-10 w-10 rounded-full" src="/src/img/user-3.jpg" alt="" />
+                <img class="h-10 w-10 rounded-full" src="/src/img/user-3.jpg" alt="avatar" />
                 <div class="text-2xs font-medium">
                   <div class="text-[444] mb-1 font-medium">Francisco Gomes</div>
                   <div class="text-[#666]">Lisbon, Portugal</div>
@@ -387,7 +397,9 @@
 
         <!-- SIGN UP - BUTTON -->
         <div>
-          <button class="rounded-full bg-[#5ec576] px-5 py-3 text-xs font-medium text-[#222]">
+          <button
+            class="btn-open-modal rounded-full bg-[#5ec576] px-5 py-3 text-xs font-medium text-[#222]"
+          >
             Open your free acount today!
           </button>
         </div>
@@ -412,41 +424,36 @@
     </footer>
 
     <!-- MODAL WINDOW -->
-    <div
-      class="fixed hidden z-50 left-1/2 top-1/2 -translate-x-1/2 w-4/5 -translate-y-1/2 bg-[#f3f3f3] py-6 px-6 shadow-lg"
-    >
+    <div class="modal hidden">
       <!-- CLOSE BUTTON -->
-      <button class="absolute right-3 top-2 text-lg">&times;</button>
+      <button class="btn-close-modal absolute right-3 top-2 text-lg">&times;</button>
 
-      <h1 class="text-xs mb-4 w-40">Open your bank account in just <span>5 minutes>
-      </h1>
+      <h1 class="mb-4 w-40 text-xs">Open your bank account in just <span>5 minutes</span></h1>
 
       <form>
-        <div class="flex mb-2 gap-x-5">
+        <div class="mb-2 flex gap-x-5">
           <label class="text-2xs">First Name</label>
-          <input class="bg-red-200 w-1/2" type="text">
+          <input class="w-1/2 bg-red-200" type="text" />
         </div>
-        <div class="flex mb-2 gap-x-5">
+        <div class="mb-2 flex gap-x-5">
           <label class="text-2xs">First Name</label>
-          <input class="bg-red-200 w-1/2" type="text">
+          <input class="w-1/2 bg-red-200" type="text" />
         </div>
-        <div class="flex mb-4 gap-x-5">
+        <div class="mb-4 flex gap-x-5">
           <label class="text-2xs">First Name</label>
-          <input class="bg-red-200 w-1/2" type="text">
+          <input class="w-1/2 bg-red-200" type="text" />
         </div>
 
-       <div class="flex justify-center ml-8 items-center">
-         <button class="bg-[#5ec576] px-5 py-1 text-xs rounded-full text-black">Next step &rarr;</button>
-       </div>
-
+        <div class="ml-8 flex items-center justify-center">
+          <button class="rounded-full bg-[#5ec576] px-5 py-1 text-xs text-black">
+            Next step &rarr;
+          </button>
+        </div>
       </form>
-
     </div>
 
-    <!-- OVERLAY -->
-      <div
-      class="overlay hidden fixed top-0 left-0 w-full h-full bg-[#0000005c] backdrop-blur-[3px] z-40"
-    ></div>
+    <!-- OVERLAY-MODAL -->
+    <div class="overlay-modal hidden"></div>
 
     <script src="/src/js/script.js"></script>
   </body>
