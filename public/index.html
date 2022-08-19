@@ -101,7 +101,7 @@
               When
               <span class="highlight">banking</span>
               meets<br />
-              <span class="bg-gradient-to-tl from-[#39b385] to-[#9be15d]">minimalist</span>
+              <span class="highlight">minimalist</span>
             </h1>
             <p class="mb-4 font-medium sm:w-60 lg:mb-5 lg:text-lg">
               A simpler banking experience for a simpler life.
@@ -241,9 +241,9 @@
       </div>
 
       <!-- OPERATIONS -->
-      <div id="operations-section" class="border-b border-[#ddd]">
+      <div id="operations-section" class="operations border-b border-[#ddd]">
         <section
-          class="relative flex flex-col items-center justify-center p-4 py-10 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
+          class="flex flex-col items-center justify-center p-4 py-10 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
         >
           <!-- OPERATIONS - HEADER -->
           <div class="section-header mb-8">
@@ -254,32 +254,30 @@
           </div>
 
           <!-- OPERATIONS - BUTTONS -->
-          <div
-            class="absolute top-[150px] z-20 text-2xs font-semibold transition-all duration-500 sm:top-[125px] 552px:top-[150px]"
-          >
+          <div class="tabs-container flex w-full justify-evenly bg-white text-2xs font-medium">
             <button
-              class="mr-3 w-16 rounded-2xl bg-[#ffcb03] py-1.5 transition-all duration-500 focus:-translate-y-1 md:mr-7 552px:w-28"
+              class="tabs w-28 -translate-y-2.5 rounded-2xl bg-[#ffcb03] py-1.5 transition-all duration-500 focus:-translate-y-3.5"
+              data-tab="1"
             >
-              <span class="552px:hidden">Transfers</span
-              ><span class="hidden 552px:block">Instant Transfers</span>
+              <span class="mr-1 font-semibold">01</span>Instant Transfers
             </button>
             <button
-              class="mr-3 w-16 rounded-2xl bg-[#5ec576] py-1.5 transition-all duration-500 focus:-translate-y-1 md:mr-7 552px:w-28"
+              class="tabs w-28 -translate-y-2.5 rounded-2xl bg-[#5ec576] py-1.5 transition-all duration-500 focus:-translate-y-3.5"
+              data-tab="2"
             >
-              <span class="552px:hidden">Loans</span
-              ><span class="hidden 552px:block">Instant Loans</span>
+              <span class="mr-1 font-semibold">02</span>Instant Loans
             </button>
             <button
-              class="mr-3 w-16 rounded-2xl bg-[#ff585f] py-1.5 transition-all duration-500 focus:-translate-y-1 md:mr-7 552px:w-28"
+              class="tabs w-28 -translate-y-2.5 rounded-2xl bg-[#ff585f] py-1.5 transition-all duration-500 focus:-translate-y-3.5"
+              data-tab="3"
             >
-              <span class="552px:hidden">Closing</span
-              ><span class="hidden 552px:block">Instant Closing</span>
+              <span class="mr-1 font-semibold">03</span>Instant Closing
             </button>
           </div>
 
           <!-- OPERATIONS - CONTENT -->
           <div
-            class="relative grid grid-cols-[50px_minmax(80px,_1fr)] grid-rows-[50px_minmax(90px,_1fr)] gap-y-1.5 gap-x-4 bg-white p-4 pt-8 md:px-12"
+            class="operations-content operation-content-1 relative grid grid-cols-[50px_minmax(80px,_1fr)] grid-rows-[50px_minmax(90px,_1fr)] gap-y-1.5 gap-x-4 bg-white p-4 pt-2 md:px-12"
           >
             <div class="flex items-center justify-center">
               <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#ffcd0331]">
@@ -308,6 +306,74 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="operations-content operation-content-2 relative hidden grid-cols-[50px_minmax(80px,_1fr)] grid-rows-[50px_minmax(90px,_1fr)] gap-y-1.5 gap-x-4 bg-white p-4 pt-2 md:px-12"
+          >
+            <div class="flex items-center justify-center">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#5ec5763a]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 stroke-[#5ec576]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <h5 class="row-start-1 row-end-2 text-sm font-medium leading-6">
+                Buy a home or make your dreams come true, with instant loans.
+              </h5>
+            </div>
+            <div class="col-start-2">
+              <p class="row-start-2 row-end-3 text-xs leading-5 text-[#666] line-clamp-4">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="operations-content operation-content-3 relative hidden grid-cols-[50px_minmax(80px,_1fr)] grid-rows-[50px_minmax(90px,_1fr)] gap-y-1.5 gap-x-4 bg-white p-4 pt-2 md:px-12"
+          >
+            <div class="flex items-center justify-center">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#ff58602d]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 stroke-[#ff585f]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13 7a4 4 0 11-8 0 4 4 0 018 0zM9 14a6 6 0 00-6 6v1h12v-1a6 6 0 00-6-6zM21 12h-6"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <h5 class="row-start-1 row-end-2 text-sm font-medium leading-6">
+                No longer need your account? No problem! Close it instantly.
+              </h5>
+            </div>
+            <div class="col-start-2">
+              <p class="row-start-2 row-end-3 text-xs leading-5 text-[#666] line-clamp-4">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
           </div>

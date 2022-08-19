@@ -65,8 +65,26 @@ document.querySelectorAll(".nav-link").forEach(function (link) {
 });
 
 /***********************************************************/
-//
+// Tabbed component
+const tabsContainer = document.querySelector(".tabs-container");
+const operationsContent = document.querySelectorAll(".operations-content");
 
+tabsContainer.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const clicked = e.target.closest(".tabs");
+  // console.log(clicked);
+
+  if (!clicked) return;
+
+  // Remove active content
+  operationsContent.forEach((el) => el.classList.add("hidden"));
+  operationsContent.forEach((el) => el.classList.remove("grid"));
+
+  // Show active content
+  document.querySelector(`.operation-content-${clicked.dataset.tab}`).classList.add("grid");
+  document.querySelector(`.operation-content-${clicked.dataset.tab}`).classList.remove("hidden");
+});
 /***********************************************************/
 //
 
