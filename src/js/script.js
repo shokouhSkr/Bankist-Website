@@ -7,6 +7,7 @@ const btnOpenModal = document.querySelectorAll(".btn-open-modal");
 const btnCloseModal = document.querySelector(".btn-close-modal");
 const btnDropDown = document.querySelector(".dropdown");
 const toggleDropDown = document.querySelector(".toggle-dropdown");
+const nav = document.querySelector(".nav");
 
 const btnScrollTo = document.querySelector(".btn-scroll-to");
 const featuresSection = document.querySelector("#features-section");
@@ -86,7 +87,25 @@ tabsContainer.addEventListener("click", function (e) {
   document.querySelector(`.operation-content-${clicked.dataset.tab}`).classList.remove("hidden");
 });
 /***********************************************************/
-//
+// Navbar fade animaition
+const hoverHandler = function (e) {
+  // console.log(this);
+
+  if (e.target.classList.contains("nav-link")) {
+    const link = e.target;
+    const siblings = link.closest(".nav").querySelectorAll(".nav-link");
+    const logo = link.closest(".nav").querySelector("img");
+
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+};
+
+// Passing argument into handler
+nav.addEventListener("mouseover", hoverHandler.bind(0.5));
+nav.addEventListener("mouseout", hoverHandler.bind(1));
 
 /***********************************************************/
 //
