@@ -18,90 +18,96 @@
     <title>Bankist | When Banking Meets Minimalist</title>
   </head>
 
-  <body class="relative h-screen bg-[#f3f3f3] font-['Poppins'] text-[#444]">
-    <nav class="nav flex items-center justify-between p-4 md:px-10 md:py-8 lg:p-10 2xs:px-6 xs:p-8">
-      <img class="w-24 transition-all duration-500 xs:w-28" src="/src/img/logo.png" alt="Logo" />
+  <body class="relative h-screen border-b border-[#ddd] bg-[#f3f3f3] font-['Poppins'] text-[#444]">
+    <header class="header h-screen">
+      <nav
+        class="nav z-50 flex w-full items-center justify-between p-4 md:px-10 md:py-8 lg:p-10 2xs:px-6 xs:p-8"
+      >
+        <img class="w-24 transition-all duration-500 xs:w-28" src="/src/img/logo.png" alt="Logo" />
 
-      <!-- NAVBAR - DESKTOP -->
-      <ul class="nav-links hidden items-center justify-between gap-x-4 text-xs sm:flex md:gap-x-6">
-        <li>
-          <a class="nav-link transition-all duration-500" href="#features-section">Features</a>
-        </li>
-        <li>
-          <a class="nav-link transition-all duration-500" href="#operations-section">Operations</a>
-        </li>
-        <li>
-          <a class="nav-link transition-all duration-500" href="#testimonials-section"
-            >Testimonials</a
-          >
-        </li>
-        <li
-          class="btn-open-modal nav-link cursor-pointer rounded-full bg-[#5ec576] px-4 py-2 text-[#222] transition-all duration-500"
+        <!-- NAVBAR - DESKTOP -->
+        <ul
+          class="nav-links hidden items-center justify-between gap-x-4 text-xs sm:flex md:gap-x-6"
         >
-          Open account
-        </li>
-      </ul>
-
-      <!-- NAVBAR - MOBILE -->
-      <div class="dropdown relative sm:hidden">
-        <button class="relative z-10 block rounded-md bg-white p-1.5 focus:outline-none xs:p-2">
-          <svg
-            class="h-5 w-5 text-[#222]"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-
-        <div
-          class="nav toggle-dropdown absolute right-0 z-20 mt-2 hidden w-44 rounded-md bg-white py-2 opacity-95 shadow-xl"
-        >
-          <ul class="nav-links">
-            <li>
-              <a
-                href="#"
-                class="btn-open-modal nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
-              >
-                open account
-              </a>
-            </li>
-            <li>
-              <a
-                href="#features-section"
-                class="nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
-              >
-                feathers
-              </a>
-            </li>
-            <li>
-              <a
-                href="#operations-section"
-                class="nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
-              >
-                operations
-              </a>
-            </li>
-            <a
-              href="#testimonials-section"
-              class="nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+          <li>
+            <a class="nav-link transition-all duration-500" href="#features-section">Features</a>
+          </li>
+          <li>
+            <a class="nav-link transition-all duration-500" href="#operations-section"
+              >Operations</a
             >
-              testimonials
-            </a>
-          </ul>
-        </div>
-      </div>
-    </nav>
+          </li>
+          <li>
+            <a class="nav-link transition-all duration-500" href="#testimonials-section"
+              >Testimonials</a
+            >
+          </li>
+          <li
+            class="btn-open-modal nav-link cursor-pointer rounded-full bg-[#5ec576] px-4 py-2 text-[#222] transition-all duration-500"
+          >
+            Open account
+          </li>
+        </ul>
 
-    <main>
+        <!-- NAVBAR - MOBILE -->
+        <div class="dropdown relative sm:hidden">
+          <button class="relative z-10 block rounded-md bg-white p-1.5 focus:outline-none xs:p-2">
+            <svg
+              class="h-5 w-5 text-[#222]"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <div
+            class="nav toggle-dropdown absolute right-0 z-20 mt-2 hidden w-44 rounded-md bg-white py-2 opacity-95 shadow-xl"
+          >
+            <ul class="nav-links">
+              <li>
+                <a
+                  href="#"
+                  class="btn-open-modal nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+                >
+                  open account
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#features-section"
+                  class="nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+                >
+                  feathers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#operations-section"
+                  class="nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+                >
+                  operations
+                </a>
+              </li>
+              <a
+                href="#testimonials-section"
+                class="nav-link block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-[#5ec576] hover:text-white"
+              >
+                testimonials
+              </a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       <!-- HOME -->
-      <div id="home" class="border-b border-[#ddd]">
-        <section
+      <section id="home">
+        <div
           class="flex flex-col gap-y-5 p-4 pt-12 pb-7 sm:flex-row sm:justify-between md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-12"
         >
           <div class="relative sm:basis-1/2">
@@ -128,13 +134,15 @@
               alt="hero image"
             />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+    </header>
 
+    <main>
       <!-- FEATURES -->
       <div id="features-section" class="border-b border-[#ddd]">
         <section
-          class="flex flex-col gap-y-3 p-4 pt-12 pb-7 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-10"
+          class="flex flex-col gap-y-3 p-4 pt-28 pb-7 md:mx-8 lg:mx-20 xl:mx-48 2xs:px-6 xs:px-8 xs:pb-10"
         >
           <!-- FEATURES - HEADER -->
           <div class="section-header">
