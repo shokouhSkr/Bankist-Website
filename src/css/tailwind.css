@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  img {
+    @apply transition-[filter] duration-500;
+  }
 }
 
 @layer components {
