@@ -10,6 +10,14 @@
     @apply bg-gradient-to-tl from-[#39b385] to-[#9be15d];
   }
 
+  .section {
+    @apply transition-[transform,opacity] duration-[1000ms,1000ms];
+  }
+
+  .section-hidden {
+    @apply translate-y-16 transform opacity-0;
+  }
+
   .section-header {
     @apply flex flex-col items-start justify-center text-xs;
   }

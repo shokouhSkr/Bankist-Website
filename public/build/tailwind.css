@@ -515,6 +515,17 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #9be15d;
 }
+.section {
+  transition-property: transform,opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 1000ms,1000ms;
+}
+.section-hidden {
+  --tw-translate-y: 4rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 0;
+}
 .section-header {
   display: flex;
   flex-direction: column;
@@ -597,14 +608,14 @@ video {
 .top-2 {
   top: 0.5rem;
 }
+.z-50 {
+  z-index: 50;
+}
 .z-10 {
   z-index: 10;
 }
 .z-20 {
   z-index: 20;
-}
-.z-50 {
-  z-index: 50;
 }
 .col-span-1 {
   grid-column: span 1 / span 1;
@@ -703,6 +714,9 @@ video {
 .h-\[6\.5px\] {
   height: 6.5px;
 }
+.w-full {
+  width: 100%;
+}
 .w-24 {
   width: 6rem;
 }
@@ -717,9 +731,6 @@ video {
 }
 .w-9 {
   width: 2.25rem;
-}
-.w-full {
-  width: 100%;
 }
 .w-28 {
   width: 7rem;
@@ -897,17 +908,6 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
-.bg-pink-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 39 119 / var(--tw-bg-opacity));
-}
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-}
-.bg-\[\#fffffff2\] {
-  background-color: #fffffff2;
-}
 .bg-\[\#fffffffa\] {
   background-color: #fffffffa;
 }
@@ -920,14 +920,14 @@ video {
 .stroke-\[\#ff585f\] {
   stroke: #ff585f;
 }
+.p-4 {
+  padding: 1rem;
+}
 .p-1\.5 {
   padding: 0.375rem;
 }
 .p-1 {
   padding: 0.25rem;
-}
-.p-4 {
-  padding: 1rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -973,6 +973,9 @@ video {
 .pb-0 {
   padding-bottom: 0px;
 }
+.pt-28 {
+  padding-top: 7rem;
+}
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -990,9 +993,6 @@ video {
 }
 .pb-1 {
   padding-bottom: 0.25rem;
-}
-.pt-28 {
-  padding-top: 7rem;
 }
 .text-left {
   text-align: left;
@@ -1189,11 +1189,6 @@ video {
          column-gap: 1.5rem;
   }
 
-  .md\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -1202,6 +1197,11 @@ video {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
@@ -1309,12 +1309,12 @@ video {
     width: 20rem;
   }
 
-  .xs\:p-2 {
-    padding: 0.5rem;
-  }
-
   .xs\:p-8 {
     padding: 2rem;
+  }
+
+  .xs\:p-2 {
+    padding: 0.5rem;
   }
 
   .xs\:px-8 {
